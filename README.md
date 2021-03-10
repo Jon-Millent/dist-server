@@ -25,4 +25,17 @@ dist static &amp; proxy server
 
 ## 部署
 
-`pm2 start index.js`
+nginx配置参考
+
+```text
+location /some/ {
+    proxy_pass http://127.0.0.1:8088/;
+    proxy_set_header Host      $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_redirect http:// $scheme://;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    autoindex on;
+}
+```  
+进程守护  
+`pm2 start index.js`  
