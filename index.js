@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
 const config = require('./config')
-const proxy = require('express-http-proxy');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 app.use('/', express.static(config.staticPath, config.staticConfig));
 
 config.proxy.forEach(item => {
-  app.use(item.path, proxy(item.target, item.config));
+  app.use(item.path, createProxyMiddleware(item));
 })
 
 app.listen(config.port);

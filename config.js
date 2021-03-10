@@ -10,8 +10,8 @@ module.exports = {
   proxy: [
     {
       path: '^/test',
-      target: 'https://www.maojita.cn',
-      config: {}
+      target: 'https://www.maojita.cn/',
+      changeOrigin: true
     }
   ]
 }
