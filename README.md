@@ -25,6 +25,9 @@ dist static &amp; proxy server
 * `staticConfig` 静态配置，参见 https://expressjs.com/zh-cn/starter/static-files.html
 * `proxy` 代理配置，参见 https://github.com/chimurai/http-proxy-middleware
 
+## 测试
+`npm run dev`
+
 ## 部署
 
 nginx配置参考
