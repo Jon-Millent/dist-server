@@ -3,9 +3,11 @@ dist static &amp; proxy server
 
 单页面应用打包出来的代理静态`dist`文件
 
-#### Applicable scene
+#### applicable scene
 * 静态托管
 * 跨域代理
+
+如非跨域无法解决项目，建议使用ngxin直接代理到dist目录
 
 ## Use
 
