@@ -46,7 +46,7 @@ location /some/ {
 `pm2 start index.js`  
 
 #### 如何使用history router模式？
-```
+
 安装
 `yarn add connect-history-api-fallback`
 
@@ -61,7 +61,8 @@ app.use(history({
 }));
 ```
 
-二级目录部署项目配置，以vue为例
+二级目录部署项目配置，以vue为例  
+
 ```
 // router.js
 {
