@@ -42,10 +42,15 @@ location /some/ {
     autoindex on;
 }
 ```  
-#### 进程守护  
+#### 使用进程守护  
 `pm2 start index.js`  
 
-#### history router
+#### 如何使用history router模式？
+```
+安装
+`yarn add connect-history-api-fallback`
+
+配置server
 ```
 ...
 const history = require('connect-history-api-fallback');
@@ -54,4 +59,22 @@ const history = require('connect-history-api-fallback');
 app.use(history({
   index: '/index.html'
 }));
+```
+
+二级目录部署项目配置，以vue为例
+```
+// router.js
+{
+...
+mode: 'history',
+base: '/二级目录/',
+...
+}
+```
+
+```
+// vue.config.js
+...
+publicPath: '/二级目录/',
+...
 ```
