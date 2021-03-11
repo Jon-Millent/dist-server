@@ -30,7 +30,7 @@ dist static &amp; proxy server
 
 ## 部署
 
-#### nginx配置参考
+### nginx配置参考
 
 ```text
 location /some/ {
@@ -42,16 +42,16 @@ location /some/ {
     autoindex on;
 }
 ```  
-#### 使用进程守护  
+### 使用进程守护  
 `pm2 start index.js`  
 
-#### 如何使用history router模式？
+### 如何使用history router模式？
 
 安装
 `yarn add connect-history-api-fallback`
 
 配置server
-```
+```js
 ...
 const history = require('connect-history-api-fallback');
 ...
@@ -63,7 +63,7 @@ app.use(history({
 
 二级目录部署项目配置，以vue为例  
 
-```
+```js
 // router.js
 {
 ...
@@ -73,7 +73,7 @@ base: '/二级目录/',
 }
 ```
 
-```
+```js
 // vue.config.js
 ...
 publicPath: '/二级目录/',
