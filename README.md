@@ -30,7 +30,7 @@ dist static &amp; proxy server
 
 ## 部署
 
-nginx配置参考
+#### nginx配置参考
 
 ```text
 location /some/ {
@@ -42,5 +42,16 @@ location /some/ {
     autoindex on;
 }
 ```  
-进程守护  
+#### 进程守护  
 `pm2 start index.js`  
+
+#### history router
+```
+...
+const history = require('connect-history-api-fallback');
+...
+
+app.use(history({
+  index: '/index.html'
+}));
+```
